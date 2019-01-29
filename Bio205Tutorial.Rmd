@@ -45,9 +45,8 @@ Another way to import an Excel spreadsheet is via code:
 
 ```{r}
 library(readxl)
-For205Tutorial <- read_excel("~/Documents/Data Analysis/For205Tutorial.xlsx", 
-    sheet = "Group 1")
-View(For205Tutorial)
+For205Tutorial <- read_excel("For205Tutorial.xlsx")
+print(For205Tutorial)
 ```
 
 When you need to import more than one sheet from Excel, you can use the above code, copying it exactly and changing the sheet title (instead of Group 1, it might be Group 2).
@@ -99,4 +98,14 @@ ggplot(For205Tutorial) +
 ```
 
 So we changed the axis by using the functions "xlab" and "ylab", then telling R what we want our labels to be called. It's important to match each parenthesis. Next, we want to clean up the lines (remember, we're trying to produce a graph that can be published in a scientific journal)
+
+```{r}
+ggplot(For205Tutorial) +
+  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
+  geom_point() +
+  xlab("Protein conc. (mg/mL)") +
+  ylab("Absorbance (595 mm)") +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = "black"))
+
+```
 
