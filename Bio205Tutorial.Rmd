@@ -41,21 +41,18 @@ In the upper right hand corner --> File --> Import Dataset --> Import from Excel
 
 If done correctly, once you "import" your file, it should appear in your environment tab in the upper right hand corner. It should also automatically open in a separate panel next to this panel (upper left hand corner of R Studio).
 
-Another way to import an Excel spreadsheet is via code:
+Another way to import an Excel spreadsheet is via code. Make sure the excel file you're looking for is located in the same directory as this file:
 
 ```{r}
 library(readxl)
-For205Tutorial <- read_excel("~/Documents/Data Analysis/For205Tutorial.xlsx", 
-    sheet = "Group 1")
-View(For205Tutorial)
+For205Tutorial <- read_excel("For205Tutorial.xlsx")
+print(For205Tutorial)
 ```
-
-When you need to import more than one sheet from Excel, you can use the above code, copying it exactly and changing the sheet title (instead of Group 1, it might be Group 2).
 
 Once imported, confirm that the data values are the same as when they were in Excel. 
 
 ```{r}
-View(For205Tutorial)
+print(For205Tutorial)
 ```
 
 If you want to view your data at any time, you can either select the tab above or create a chunk with the code shown above. Capitilization is very important so make sure the code is written with puncutation/capitalization, or it will not work.
