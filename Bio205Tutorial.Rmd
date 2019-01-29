@@ -107,3 +107,26 @@ ggplot(For205Tutorial) +
 
 ```
 
+We have a nice looking graph, so let's add the regression line with "geom_smooth(method=lm, se = FALSE). This will allow a linear trendline.
+
+```{r}
+library(devtools)
+```
+
+
+```{r}
+library(devtools)
+source_gist("524eade46135f6348140")
+ggplot(For205Tutorial) +
+  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
+  stat_smooth_func(geom="text",method="lm",hjust=0,parse=TRUE) +
+  geom_point() +
+  xlab("Protein conc. (mg/mL)") +
+  ylab("Absorbance (595 mm)") +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
+  geom_smooth(method=lm, se = FALSE) +
+   geom_point() + facet_wrap(~)
+
+```
+
+So we want a trendline equation
