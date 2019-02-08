@@ -2,48 +2,58 @@
   title: "205Tutorial"
 output: html_document
 ---
-  
 knitr::opts_chunk$set(echo = TRUE)
 
+#Hello Bio 205 student! Welcome to R studio. This tutorial will show you the
+#first few steps in analyzing and visualizing data using R. You can see that
+#this text is green and starts with a pound sign. This is 'commented' text. The
+#black text below we can consider R script, or just code.
+#Try "running" the code below. You can do that by clicking on line 14 
+#and hitting command-return (enter).
 
 summary(cars)
 
-#An edit
+#A bunch of statistics should have appeared in the bottom right panel, the
+#console. What you did was apply a function, 'summary', to the 'cars' dataset.
+#Cars is an embedded data set that you can explore at another time, for now
+#let's keep going.
 
-#Cars is an embedded data set that you can explore at another time, for now let's keep going.
-
-## Including Plots
+#Functions can have other types of output, like plots. Try the one below. (Just
+#command-return the black text.)
 
 plot(pressure)
 
+#Awesome! There now should be a plot that has appeared in the lower right panel.
 
-#Now that we know some basic R markdown functions, we will move onto BIOL205 data. Let's walk through importing data from Excel.
+#Let's keep going and work with data relevant to biology. First we'll walk
+#through importing data from Excel.
 
-#In the upper left hand corner --> File --> Import Dataset --> Import from Excel --> Browse, and look for your Excel file.
+#In the upper left hand corner go to --> File --> Import Dataset --> Import from Excel
+#--> Browse, and look for your Excel file.
 
-#If done correctly, once you "import" your file, it should appear in your
+#If done correctly, once you "import" your file, it should appear in the
 #environment tab in the upper right panel. It should also automatically open in
 #a separate tab next to this tab (upper left hand corner of R Studio).
 
-#Another way to import an Excel spreadsheet is via code. Make sure the excel file you're looking for is located in the same directory (folder) as this file:
-  
+#Another way to import an Excel spreadsheet is via code. Make sure the excel
+#file you're looking for is located in the same directory (folder) as this file:
+#Hint: try highlighting the next few lines, then hit command-return.
 install.packages("readxl", repos = "https://cloud.r-project.org")
 library(readxl)
 For205Tutorial <- read_excel("For205Tutorial.xlsx")
-print(For205Tutorial)
 
 #Once imported, confirm that the data values are the same as when they were in Excel. 
 
-
 print(For205Tutorial)
 
-
 #If you want to view your data at any time, you can either select the tab above
-#or create a chunk with the code shown above. Capitilization is very important
-#so make sure the code is written with puncutation/capitalization, or it will
-#not work.
-#Now we're going to show you how to plot your data, via a scatterplot to create a standard curve.
-#First, you'll have to install ggplot2. When installing packages, the package title must be in single quotes, as below. Go ahead and run this code chunk:
+#or enter the code shown above. Make sure the code is written with puncutation/capitalization, or it will
+#not work. You can even write the code in the console below and hit enter.
+
+#Now we're going to show you how to plot your data, via a scatterplot, to create
+#a standard curve. First, you'll have to install ggplot2. When installing
+#packages, the package title will be in single quotes, as below. Go ahead and
+#run this code chunk:
   
 install.packages('ggplot2')
 
@@ -51,28 +61,31 @@ install.packages('ggplot2')
 #Notice there is red text; sometimes red texts means there is an error, other
 #times it is not. For this specific situation, this red text is good! It means
 #our package worked and downloaded properly.
-#Once you install the package you need, you have to activate the package, via running the code chunk below.
 
+#Once you install the package you need, you have to activate the package, via
+#running the code chunk below.
 
 library(ggplot2)
 
-
 #Great!
   
-#Now, let's try a basic scatterplot. The first code line: ggplot(For205Tutorial)
-#is describing what graphing package we're using, and also what dataset we are
-#using The second code line "aes(For205Tutorial$`Protein conc. (mg/mL`),
+#Now, let's try a basic scatterplot. 
+#The first code line: ggplot(For205Tutorial) is describing what graphing package 
+#we're using, and also what dataset we are using.
+#The second code line "aes(For205Tutorial$`Protein conc. (mg/mL`),
 #For205Tutorial$`Absorbance (at 595nm)`)" details the x and y axis,
 #respectively, from that data set. We have to tell R Studio what data set we're
 #using for each axis, and the $ sign denotes which column the data is coming
-#from. The third code line is telling R Studio what type of graph we want;
-#specifically we want a point plot, or scatterplot.
+#from. 
+#The third code line is telling R Studio what type of graph we want; specifically 
+#we want a point plot, or scatterplot.
 
 ggplot(For205Tutorial) +
 aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
 geom_point()
 
-#This is a good start, but we need to change the axis labels; let's copy and paste the above code into another grey chunk. 
+#This is a good start, but we need to change the axis labels; let's run the next 
+#bit of code.
 
 ggplot(For205Tutorial) +
   aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
@@ -104,7 +117,9 @@ aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 n
 geom_point() +
 xlab("Protein conc. (mg/mL)") +
 ylab("Absorbance (595 mm)") +
-theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = "black")) +
+theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), 
+                   panel.grid.minor = element_blank(), axis.line = 
+                     element_line(colour = "black")) +
 geom_smooth(method=lm, se = FALSE, color="black")
 
 #So great, we have a line for the standards. But what is that line? We can
@@ -117,10 +132,10 @@ geom_smooth(method=lm, se = FALSE, color="black")
 
 
 lm1 <- lm(For205Tutorial$`Protein conc. (mg/mL)` ~ For205Tutorial$`Absorbance (at 595 nm)`)
-print(lm1)
+print(lm1) #note that the print function always 'prints' stuff in the console below.
 
 
-#Under coefficients we can find the y-intercept (-0.1665) as well as the slope
+#Under 'coefficients' we can find the y-intercept (-0.1665) as well as the slope
 #(1.1052). Putting this together we get the following equation: y = 1.1052x +
 #-0.1665 , when x is the protein concentration and y is the absorbance. Let's
 #try to put this equation on our plot:
@@ -146,7 +161,7 @@ x1 <- (y1 + 0.1665)/1.1052
 print(x1)
 
 
-#Let's break down the above code chunk. First we told them what our unknown y
+#Let's break down the above code chunk. First we told R what our unknown y
 #concentration is. The next line defines a new variable, x, from the equation of
 #the line that we found up in chunk 9. The last line of code then prints our x
 #variable: 0.603 mg/mL. We can ignore that bracketed number in our output. But,
