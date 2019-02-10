@@ -193,7 +193,7 @@ print(x1)
 
 ##Helpful tips for using R##
 #You never need to learn how to code! Just copy and paste code chunks that seem to 
-#work, and change things to fit your data and/or analysis.
+#work, and change things to fit your data and/or analysis
 
 
 
