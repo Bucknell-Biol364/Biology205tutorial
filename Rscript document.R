@@ -62,11 +62,6 @@ print(For205Tutorial)
 #Now we're going to show you how to plot your data, via a scatterplot, to create
 #a standard curve. First, you'll have to install ggplot2. When installing
 #packages, the package title will be in single quotes, as below. Go ahead and
-#run this code:
-
-#Now we're going to show you how to plot your data, via a scatterplot, to create
-#a standard curve. First, you'll have to install ggplot2. When installing
-#packages, the package title will be in single quotes, as below. Go ahead and
 #run this code chunk:
   
 install.packages('ggplot2')
