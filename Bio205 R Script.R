@@ -3,12 +3,9 @@
 output: html_document
 ---
   
-  knitr::opts_chunk$set(echo = TRUE)
-
+#Welcome to R Studio! This is a R Script, where all comments need to have a hashtag prior to the text(like this line). All code is like below:
 
 summary(cars)
-
-#An edit
 
 #Cars is an embedded data set that you can explore at another time, for now let's keep going.
 
@@ -16,8 +13,7 @@ summary(cars)
 
 plot(pressure)
 
-
-#Now that we know some basic R markdown functions, we will move onto BIOL205 data. Let's walk through importing data from Excel.
+#Now that we know some basic R script functions, we will move onto BIOL205 data. Let's walk through importing data from Excel.
 
 #In the upper left hand corner --> File --> Import Dataset --> Import from Excel --> Browse, and look for your Excel file.
 
@@ -46,7 +42,6 @@ print(For205Tutorial)
 #First, you'll have to install ggplot2. When installing packages, the package title must be in single quotes, as below. Go ahead and run this code chunk:
 
 install.packages('ggplot2')
-
 
 #Notice there is red text; sometimes red texts means there is an error, other
 #times it is not. For this specific situation, this red text is good! It means
