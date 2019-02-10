@@ -3,7 +3,7 @@ Welcome to the BIOL 205 R Studio lab assignment! Let's go through a few things t
 
 Introduction:
 
-R is an invaluable tool in analyzing data that can be used for research, publication, as well as class work, and this is presumably your first exposure to such a useful program. For this assignment, we're going to walk you through step by step how to complete the project and use trips/tricks to get the data exactly how you want it to look. 
+R is an invaluable tool in analyzing data that can be used for research, publication, as well as class work, and this is presumably your first exposure to such a useful program. For this assignment, we're going to walk you through step by step how to complete the project and use tips/tricks to get the data exactly how you want it to look. 
 
 Accessing the tutorial and project:
 
