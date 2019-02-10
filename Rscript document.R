@@ -11,7 +11,7 @@ knitr::opts_chunk$set(echo = TRUE)
 #first few steps in analyzing and visualizing data using R. You can see that
 #this text is green and starts with a pound sign. This is 'commented' text. The
 #black text below we can consider R script, or just code.
-#Try "running" the code below. You can do that by clicking on line 14 
+#Try "running" the code below. You can do that by clicking on the line starting with summary
 #and hitting command-return (enter).
 
 summary(cars)
@@ -22,7 +22,7 @@ summary(cars)
 #let's keep going.
 
 #Functions can have other types of output, like plots. Try the one below. (Just
-#command-return the black text.)
+#command-return the text below.)
 
 plot(pressure)
 
@@ -170,7 +170,7 @@ print(x1)
 
 #Let's break down the above code chunk. First we told R what our unknown y
 #concentration is. The next line defines a new variable, x, from the equation of
-#the line that we found up in chunk 9. The last line of code then prints our x
+#the line that we calculated earlier. The last line of code then prints our x
 #variable: 0.603 mg/mL. We can ignore that bracketed number in our output. But,
 #why did we label the y and x with a 1? That's so we can look at more unknowns.
 #To do so, all you need to do is copy chunk 11 and change the "x1"s to "x2"s and
@@ -178,7 +178,7 @@ print(x1)
 #tab.
 
 ##CONCLUSION AND FINAL EXERCISE##
-#So, what next?
+#So, what's next?
 #There's actually a lot more you can do with R. But for starters, let's take another
 #look at the plots tab to the right. The arrows up top let you look back at each of
 #the past plots we've produced in this tutorial. You can also use the export button
