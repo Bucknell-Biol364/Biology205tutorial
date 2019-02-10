@@ -1,0 +1,6 @@
+"0","ggplot(For205Tutorial) +"
+"0","  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +"
+"0","  geom_point() +"
+"0","  xlab(""Protein conc. (mg/mL)"") +"
+"0","  ylab(""Absorbance (595 mm)"") +"
+"0","  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = ""black""))"

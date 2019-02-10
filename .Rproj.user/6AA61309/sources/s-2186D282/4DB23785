@@ -1,0 +1,23 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549814424530.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "4DB23785",
+    "lastKnownWriteTime" : 1549396102,
+    "last_content_update" : 1549396102,
+    "path" : "~/Documents/Data Analysis/Biology205tutorial/Bio205 R Script.R",
+    "project_path" : "Bio205 R Script.R",
+    "properties" : {
+        "cursorPosition" : "167,75",
+        "scrollLine" : "147",
+        "tempName" : "Untitled1"
+    },
+    "relative_order" : 1,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

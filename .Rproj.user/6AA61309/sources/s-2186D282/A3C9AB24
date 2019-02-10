@@ -1,0 +1,22 @@
+{
+    "collab_server" : "",
+    "contents" : "",
+    "created" : 1549814771140.000,
+    "dirty" : false,
+    "encoding" : "UTF-8",
+    "folds" : "",
+    "hash" : "0",
+    "id" : "A3C9AB24",
+    "lastKnownWriteTime" : 1549814414,
+    "last_content_update" : 1549814414,
+    "path" : "~/Documents/Data Analysis/Biology205tutorial/Rscript document.R",
+    "project_path" : "Rscript document.R",
+    "properties" : {
+        "cursorPosition" : "212,12",
+        "scrollLine" : "192"
+    },
+    "relative_order" : 3,
+    "source_on_save" : false,
+    "source_window" : "",
+    "type" : "r_source"
+}

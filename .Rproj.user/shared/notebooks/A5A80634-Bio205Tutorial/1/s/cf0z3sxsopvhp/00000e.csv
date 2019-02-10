@@ -1,0 +1,22 @@
+"0","library(devtools)"
+"0","source_gist(""524eade46135f6348140"")"
+"2","Sourcing https://gist.githubusercontent.com/kdauria/524eade46135f6348140/raw/676acaca9a0a144ef320ae2ef00a31c3daa7179d/ggplot_smooth_func.R
+"
+"2","SHA-1 hash of file is c0b163b9fd2d7fe7bd5541e3266d8d36ff3b895d
+"
+"0","ggplot(For205Tutorial) +"
+"0","  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +"
+"0","  stat_smooth_func(geom=""text"",method=""lm"",hjust=0,parse=TRUE) +"
+"0","  geom_point() +"
+"0","  xlab(""Protein conc. (mg/mL)"") +"
+"0","  ylab(""Absorbance (595 mm)"") +"
+"0","  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), panel.grid.minor = element_blank(), axis.line = element_line(colour = ""black"")) +"
+"0","  geom_smooth(method=lm, se = FALSE) +"
+"0","   geom_point() + facet_wrap(~class)"
+"2","Error: At least one layer must contain all faceting variables: `class`.
+* Plot is missing `class`
+* Layer 1 is missing `class`
+* Layer 2 is missing `class`
+* Layer 3 is missing `class`
+* Layer 4 is missing `class`
+"
