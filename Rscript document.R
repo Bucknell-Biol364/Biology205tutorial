@@ -210,8 +210,5 @@ print(x1)
 
 
 ##Acknowledgments##
-<<<<<<< HEAD
 ##BIOL 206 Group/Their Code/Read me file
-=======
-#BIOL206 Group, their code & read me file
->>>>>>> 14b813bfd6c1a3b3eb3a761b659d97bd6e0fe189
+##Work was split and done equally between both Chad and Jordan, and we both had influence on each part of the tutorial
