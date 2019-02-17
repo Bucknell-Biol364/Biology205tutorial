@@ -16,7 +16,7 @@ knitr::opts_chunk$set(echo = TRUE)
 
 summary(cars)
 
-#A bunch of statistics should have appeared in the bottom right panel, the
+#A bunch of statistics should have appeared in the bottom left panel, the
 #console. What you did was apply a function, 'summary', to the 'cars' dataset.
 #Cars is an embedded data set that you can explore at another time, for now
 #let's keep going.
@@ -52,8 +52,8 @@ For205Tutorial <- read_excel("For205Tutorial.xlsx")
 
 print(For205Tutorial)
 
-#If you want to view your data at any time, you can either select the tab above
-#or enter the code shown above. Make sure the code is written with puncutation/capitalization, or it will
+#If you want to view your data at any time, you can
+#enter the code shown above. Make sure the code is written with puncutation/capitalization, or it will
 #not work. You can even write the code in the console below and hit enter.
 
 
@@ -88,8 +88,8 @@ library(ggplot2)
 #we want a point plot, or scatterplot.
 
 ggplot(For205Tutorial) +
-aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
-geom_point()
+  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
+  geom_point()
 
 #This is a good start, but we need to change the axis labels; let's run the next 
 #bit of code.
@@ -119,14 +119,14 @@ ggplot(For205Tutorial) +
 #trendline.
 
 ggplot(For205Tutorial) +
-aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
-geom_point() +
-xlab("Protein conc. (mg/mL)") +
-ylab("Absorbance (595 mm)") +
-theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), 
+  aes(For205Tutorial$`Protein conc. (mg/mL)`, For205Tutorial$`Absorbance (at 595 nm)`) +
+  geom_point() +
+  xlab("Protein conc. (mg/mL)") +
+  ylab("Absorbance (595 mm)") +
+  theme_bw() + theme(panel.border = element_blank(), panel.grid.major = element_blank(), 
                    panel.grid.minor = element_blank(), axis.line = 
                      element_line(colour = "black")) +
-geom_smooth(method=lm, se = FALSE, color="black")
+  geom_smooth(method=lm, se = FALSE, color="black")
 
 #So great, we have a line for the standards. But what is that line? We can
 #actually take a look at the equation of the line by using the lm function.
@@ -172,6 +172,13 @@ print(x1)
 #so on. If you noticed, the x's and y's you make will appear in the Environment
 #tab.
 
+#Let's try using "summary(lm1)" to locate the R-squared
+#(exclude the quotations when using the summary function). Copy/paste the code
+#that produced the most recent plot to the lines below this comment, and then
+#alter the code to include the R-squared value.
+
+
+
 ##CONCLUSION AND FINAL EXERCISE##
 #So, what's next?
 #There's actually a lot more you can do with R. But for starters, let's take another
@@ -179,11 +186,6 @@ print(x1)
 #the past plots we've produced in this tutorial. You can also use the export button
 #to get your plot out of R studio and to a more usefule place.
 
-#Let's do one last exercise. You can actually include the R-squared value on
-#your plot if you want. Try using "summary(lm1)" to locate the R-squared
-#(exclude the quotations when using the summary function). Copy/paste the code
-#that produced the most recent plot to the lines below this comment, and then
-#alter the code to include the R-squared value.
 
 
 
