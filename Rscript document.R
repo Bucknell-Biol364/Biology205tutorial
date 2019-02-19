@@ -168,7 +168,7 @@ print(x1)
 #the line that we calculated earlier. The last line of code then prints our x
 #variable: 0.603 mg/mL. We can ignore that bracketed number in our output. But,
 #why did we label the y and x with a 1? That's so we can look at more unknowns.
-#To do so, all you need to do is copy chunk 11 and change the "x1"s to "x2"s and
+#To do so, all you need to do is copy the above code chunk and change the "x1"s to "x2"s and
 #so on. If you noticed, the x's and y's you make will appear in the Environment
 #tab.
 
@@ -176,6 +176,8 @@ print(x1)
 #(exclude the quotations when using the summary function). Copy/paste the code
 #that produced the most recent plot to the lines below this comment, and then
 #alter the code to include the R-squared value.
+
+
 
 
 
